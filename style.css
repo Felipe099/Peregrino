@@ -51,7 +51,7 @@ body {
 
 .title {
     font: 700 var(--title-font-size) var(--title-font);
-    color: var(--title-color);
+    color: white;
     -webkit-font-smoothing: auto;
 }
 
@@ -139,7 +139,7 @@ body {
 
 .logo {
     font: 700 1.31rem 'Poppins', sans-serif;
-    color: var(--title-color);
+    color: white;
 }
 
 .logo span {
@@ -244,10 +244,15 @@ nav.show div.icon-close {
     opacity: 1;
     top: 1.5rem;
 }
+/*=========== HEADER =====================*/
+#header {
+    background: black;
+}
 
 /*=========== HOME =====================*/
 #home {
     overflow: hidden;
+    background: black;
 }
 
 #home .container {
@@ -284,6 +289,7 @@ nav.show div.icon-close {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     text-align: center;
+    color: white;
 }
 
 #home .text h1 {
@@ -297,7 +303,7 @@ nav.show div.icon-close {
 /*=========== ABOUT =====================*/
 
 #about {
-    background: white;
+    background: black;
 }
 
 #about .container {
@@ -331,22 +337,30 @@ nav.show div.icon-close {
 #about .image img,
 #about .image::before {
     border-radius: 0.25rem;
-    
 }
 
 #about .text {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+    color: white;
 }
 
 /*=========== SERVICES =====================*/
+#services {
+    background: black;
+}
+
+#services .subtitle {
+    color: white;
+}
+
 .cards.grid {
     gap: 1.5rem;
 }
 
 .card {
     padding: 3.625rem 2rem;
-    box-shadow: 0px 0px 12px rgba(136, 83, 83, 0.08);
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.08);
     border-bottom: 0.25rem solid var(--base-color);
     border-radius: 0.25rem 0.25rem 0 0;
     text-align: center;
@@ -371,7 +385,7 @@ nav.show div.icon-close {
 /*=========== PRIZEDRAW =====================*/
 
 #prizeDraw {
-    background: white;
+    background: black;
 }
 
 #prizeDraw.container {
@@ -383,99 +397,117 @@ nav.show div.icon-close {
     text-align: center;
 }
 
-.content{
+.content {
     width: 500px;
-    min-height: 560px;    
+    min-height: 560px;
     margin: 0px auto;
-    position: relative;   
-  }
+    position: relative;
+}
 
-  h1{
+h1 {
     font-size: 48px;
-    color: #066a75;
+    color: white;
     padding: 2px 0 10px 0;
-    font-family: Arial,sans-serif;
+    font-family: var(--body-font);
     font-weight: bold;
     text-align: center;
     padding-bottom: 30px;
-  }
-  h1:after{
+}
+h1:after {
     content: ' ';
     display: block;
     width: 100%;
     height: 2px;
     margin-top: 10px;
-    background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
-    background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
-  }
-  p{
-    margin-bottom:15px;
-  }
-   
-  .content p:first-child{
+    background: -webkit-linear-gradient(
+        left,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.8) 20%,
+        rgb(255, 255, 255) 53%,
+        rgba(255, 255, 255, 0.8) 79%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    background: linear-gradient(
+        left,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.8) 20%,
+        rgb(255, 255, 255) 53%,
+        rgba(255, 255, 255, 0.8) 79%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+p {
+    margin-bottom: 15px;
+}
+
+.content p:first-child {
     margin: 0px;
-  }
-   
-  label{
-    color: #405c60;
+}
+
+label {
+    color: white;
     position: relative;
-  }
-  /* placeholder */
-::-webkit-input-placeholder  {
-    color: #bebcbc; 
-    font-style: italic;
-  }
-   
-  input:-moz-placeholder,
-  textarea:-moz-placeholder{
+}
+/* placeholder */
+::-webkit-input-placeholder {
     color: #bebcbc;
     font-style: italic;
-  }
-  input {
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #bebcbc;
+    font-style: italic;
+}
+input {
     outline: none;
-  }
-   
-  /*estilo dos input,  menos o checkbox */
-  input:not([type="checkbox"]){
+}
+
+/*estilo dos input,  menos o checkbox */
+input:not([type='checkbox']) {
     width: 100%;
     margin-top: 4px;
-    padding: 10px;    
+    padding: 10px;
     border: 1px solid #b2b2b2;
-   
+
     -webkit-border-radius: 3px;
     border-radius: 3px;
-   
+
     -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
     box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
-   
+
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
-  }
-   
-  /*estilo do botão submit */
-  input[type="submit"]{
-    width: 100%!important;
-    cursor: pointer;  
-    background: rgb(61, 157, 179);
+}
+
+/*estilo do botão submit */
+input[type='submit'] {
+    width: 100% !important;
+    font: 700 var(--body-font);
+    cursor: pointer;
+    background: var(--base-color);
     padding: 8px 5px;
     color: #fff;
-    font-size: 20px;  
-    border: 1px solid #fff;   
-    margin-bottom: 10px;  
+    font-size: 20px;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
     text-shadow: 0 1px 1px #333;
-   
+
     -webkit-border-radius: 5px;
     border-radius: 5px;
-   
+
     transition: all 0.2s linear;
-  }
-   
-  /*estilo do botão submit no hover */
-  input[type="submit"]:hover{
-    background: #4ab3c6;
-  }
+}
+
+/*estilo do botão submit no hover */
+input[type='submit']:hover {
+    background: var(--base-color-alt);
+}
 
 /*=========== TESTIMONIALS =====================*/
+#testimonials {
+    background: black;
+}
 
 #testimonials .container {
     margin-left: 0;
@@ -490,7 +522,7 @@ nav.show div.icon-close {
 
 #testimonials blockquote {
     padding: 2rem;
-    box-shadow: 0px 0px 12px rgba(136, 83, 83, 0.08);
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.08);
     border-radius: 0.25rem;
 }
 
@@ -498,7 +530,7 @@ nav.show div.icon-close {
     position: relative;
     text-indent: 1.875rem;
     margin-bottom: 1.5rem;
-    color: var(--title-color);
+    color: white;
 }
 
 #testimonials blockquote p span {
@@ -513,6 +545,7 @@ nav.show div.icon-close {
     display: flex;
     align-items: center;
     font-style: normal;
+    color: white;
 }
 
 #testimonials cite img {
@@ -535,12 +568,12 @@ nav.show div.icon-close {
 }
 
 .swiper-pagination-bullet-active {
-    background: var(--base-color);
+    background: white;
 }
 
 /*=========== CONTACT =====================*/
 #contact {
-    background: white;
+    background: black;
 }
 #contact .grid {
     gap: 4rem;
@@ -584,16 +617,17 @@ footer.section {
 footer .logo {
     display: inline-block;
     margin-bottom: 1.5rem;
+    color: black;
 }
 
 footer .brand p {
-    color: var(--text-color-light);
     margin-bottom: 0.75rem;
+    color: black;
 }
 
 footer i {
     font-size: 1.5rem;
-    color: var(--text-color-light);
+    color: black;
 }
 
 footer .social {
